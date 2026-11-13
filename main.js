@@ -72,7 +72,7 @@
       }
       traces.push(pts);
     }
-    traces.forEach((t, i) => { if (i % 3 === 0) pulses.push({ t, seg: 0, p: Math.random() }); });
+    traces.forEach((t, i) => { if (i % 8 === 0) pulses.push({ t, seg: 0, p: Math.random() }); });
   }
   function draw() {
     ctx.clearRect(0, 0, W, H);
@@ -87,9 +87,9 @@
       const a = u.t[u.seg], b = u.t[u.seg + 1];
       const x = a[0] + (b[0] - a[0]) * u.p, y = a[1] + (b[1] - a[1]) * u.p;
       const g = ctx.createRadialGradient(x, y, 0, x, y, 14);
-      g.addColorStop(0, 'rgba(0,255,157,.9)'); g.addColorStop(1, 'rgba(0,255,157,0)');
+      g.addColorStop(0, 'rgba(0,255,157,.55)'); g.addColorStop(1, 'rgba(0,255,157,0)');
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, 14, 0, 6.3); ctx.fill();
-      u.p += 4 / (Math.hypot(b[0] - a[0], b[1] - a[1]) || 1);
+      u.p += 0.8 /(Math.hypot(b[0] - a[0], b[1] - a[1]) || 1);
       if (u.p >= 1) { u.p = 0; u.seg = (u.seg + 1) % (u.t.length - 1); }
     });
     if (!reduce) requestAnimationFrame(draw);
