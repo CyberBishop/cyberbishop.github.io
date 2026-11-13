@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timi Alabi · Security Engineer</title>
+<meta name="description" content="Timi Alabi: security engineer, CTF competitor and hardware tinkerer. Enterprise security (GRC), vulnerability research, cloud and embedded projects.">
+<meta property="og:title" content="Timi Alabi · Security Engineer">
+<meta property="og:description" content="Breaks things, secures things, builds circuits. 4th of 27 at the Mastercard CTF National Finals.">
+<meta property="og:image" content="assets/nationals.png">
+<meta name="theme-color" content="#07090c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2307090c'/%3E%3Cpath d='M7 22l6-6-6-6M15 23h10' stroke='%2300ff9d' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="pcb" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="logo" href="#top"><span class="dot"></span>timi@sec:~$</a>
+  <nav>
+    <a href="#about">about</a>
+    <a href="#experience">experience</a>
+    <a href="#ctf">ctf</a>
+    <a href="#work">work</a>
+    <a href="#bench">workbench</a>
+    <a href="#contact" class="cta">contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="status"><span class="pulse"></span> Enterprise Security Co-op @ SaskEnergy · Regina, SK</p>
+      <h1>I break things,<br><span class="grad">secure them,</span><br>and solder the rest.</h1>
+      <p class="lead">Hi, I'm <strong>Timi Alabi</strong>. I'm a security engineer in training working across GRC, application security and cloud reliability. Off the clock I play CTFs and build hardware, like ESP32 boards that talk to HomeKit.</p>
+      <div class="typed" aria-live="off"><span class="prompt">&gt;</span> <span id="typed"></span><span class="caret"></span></div>
+      <div class="btns">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn" href="https://github.com/CyberBishop" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/alviiin/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <div class="frame">
+        <img src="assets/timi.png" alt="Portrait of Timi Alabi" width="320" height="320">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      </div>
+      <figcaption><span>ID</span> CyberBishop <span>CLEARANCE</span> curiosity</figcaption>
+    </figure>
+  </section>
+
+  <section class="stats" aria-label="Highlights">
+    <div><b data-count="4" data-suffix="th">0</b><span>of 27 teams, Mastercard CTF National Finals</span></div>
+    <div><b data-count="2" data-suffix="nd">0</b><span>place, BSides Regina 2026 &amp; MagpieCTF</span></div>
+    <div><b data-count="40" data-suffix="%">0</b><span>faster incident resolution through root-cause analysis</span></div>
+    <div><b data-count="1.4" data-suffix="M/hr">0</b><span>requests handled by clusters I supported</span></div>
+  </section>
+
+  <section id="about" class="section">
+    <h2><i>01</i> About</h2>
+    <div class="about-grid">
+      <p>I'm an MEng student in Software Systems Engineering at the <strong>University of Regina</strong> with an electrical and electronics engineering degree from Covenant University. That background shapes how I think about security: it's systems all the way down, from a GPIO pin to a WAF rule.</p>
+      <p>I've run production infrastructure on Azure and GCP, built monitoring and WAF coverage for digital banking, and now work on enterprise security governance, risk and compliance at SaskEnergy. Outside of work I do responsible disclosure on invite-only platforms (including an accepted <em>High</em> severity unauthenticated file upload) and compete in CTFs with the UofR Cybersecurity Club.</p>
+      <ul class="facts">
+        <li><span>Based in</span> Regina, Saskatchewan 🇨🇦</li>
+        <li><span>Studying</span> MEng Software Systems Eng.</li>
+        <li><span>Focus</span> AppSec · GRC · Cloud security</li>
+        <li><span>CTF since</span> 2020</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <h2><i>02</i> Experience</h2>
+    <ol class="timeline">
+      <li>
+        <time>2026 – now</time>
+        <h3>Enterprise Security Co-op <small>SaskEnergy · Regina, SK</small></h3>
+        <p>Governance, risk and compliance in an enterprise security team: risk assessments, security exceptions and incident response planning.</p>
+      </li>
+      <li>
+        <time>Jul 2025 – 2026</time>
+        <h3>Site Reliability Engineer, App Support <small>Asians Group LLC · Remote</small></h3>
+        <ul>
+          <li>Managed Azure Scale Sets and GCP autoscaling for clusters handling about 1.4M requests per hour at 99.9% availability.</li>
+          <li>Analysed proxy logs in Elasticsearch to detect anomalies, which fed WAF rule refinements that cut false-positive alerts.</li>
+          <li>Cut time to resolution by 40% through root-cause analysis and tighter coordination with engineering.</li>
+        </ul>
+      </li>
+      <li>
+        <time>Sep 2024 – Jul 2025</time>
+        <h3>Technical Support Engineer <small>Advancly · Remote</small></h3>
+        <ul>
+          <li>Kept multi-region Azure production for digital banking services reliable 24/7.</li>
+          <li>Built Log Analytics dashboards and automated alerts, cutting incident response time by 90%.</li>
+          <li>Rolled out Application Gateways and WAF to protect production traffic, with continuous log analysis for threat detection.</li>
+        </ul>
+      </li>
+      <li>
+        <time>Summer 2022</time>
+        <h3>IT &amp; Security Intern <small>Huawei Technologies Nigeria</small></h3>
+        <p>Network monitoring that cut connectivity interruptions by 30%, plus end-user support at 95% satisfaction.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="ctf" class="section">
+    <h2><i>03</i> Capture the Flag</h2>
+    <p class="sub">Competing with the University of Regina Cybersecurity Club (UofRCTF).</p>
+    <div class="ctf-grid">
+      <article class="card photo">
+        <img src="assets/nationals.png" alt="Team UofRCTF at the Mastercard CTF National Finals in Montreal" loading="lazy">
+        <div>
+          <span class="tag gold">4th / 27</span>
+          <h3>Mastercard CTF National Finals</h3>
+          <p>Montreal, 2026. 4,300 points against 27 post-secondary teams from across Canada, run by the National Cybersecurity Consortium. The same team took 3rd at the West Regional.</p>
+        </div>
+      </article>
+      <article class="card photo">
+        <img src="assets/bsides.png" alt="Podium at BSides Regina 2026" loading="lazy">
+        <div>
+          <span class="tag silver">2nd place</span>
+          <h3>BSides Regina 2026 CTF</h3>
+          <p>"The dream team" took second, and our club swept the whole podium (1st, 2nd and 3rd).</p>
+        </div>
+      </article>
+      <article class="card slim">
+        <span class="tag">2nd place</span>
+        <h3>MagpieCTF</h3>
+        <p>Runner-up finish at MagpieCTF.</p>
+      </article>
+      <article class="card slim">
+        <span class="tag">Writeups</span>
+        <h3>Public writeups</h3>
+        <p>Walkthroughs from CTFs I've played, from Cyber Apocalypse onward.</p>
+        <a href="https://github.com/CyberBishop/writeups" target="_blank" rel="noopener">github.com/CyberBishop/writeups ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <h2><i>04</i> Security work</h2>
+    <div class="grid3">
+      <article class="card">
+        <span class="tag red">Vuln research</span>
+        <h3>Responsible disclosure</h3>
+        <p>Rewarded reports on invite-only bug bounty platforms, including an accepted <strong>High</strong> unauthenticated file upload. Black-box testing with Burp Suite, ffuf, Nuclei and Frida for mobile. Program details stay confidential.</p>
+      </article>
+      <article class="card">
+        <span class="tag red">Offensive lab</span>
+        <h3>GDG CyberQuest IDOR Lab</h3>
+        <p>A deliberately vulnerable app I built for the Google Developer Group Lagos CyberQuest CTF. It teaches insecure direct object references and broken access control.</p>
+        <a href="https://github.com/CyberBishop/GDG-Cyberquest-IDOR-Lab" target="_blank" rel="noopener">View repo ↗</a>
+      </article>
+      <article class="card">
+        <span class="tag blue">Cloud &amp; detection</span>
+        <h3>WAF &amp; log-driven detection</h3>
+        <p>Application Gateway and WAF rollouts on Azure, Elasticsearch proxy-log analysis, and Log Analytics alerting that moved teams from reactive to proactive.</p>
+      </article>
+      <article class="card">
+        <span class="tag green">Research</span>
+        <h3>LOLBAS binary identification</h3>
+        <p>Machine learning to flag living-off-the-land binaries in threat scenarios, mapped to MITRE ATT&amp;CK.</p>
+      </article>
+      <article class="card">
+        <span class="tag green">Deep learning</span>
+        <h3>Face liveness &amp; anti-spoofing</h3>
+        <p>Compared five deep learning models for face anti-spoofing, then improved on the baseline with attention. Used as an AI oracle for a blockchain identity prototype.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Tooling</span>
+        <h3>Bug bounty framework</h3>
+        <p>A Dockerised recon framework I maintain for repeatable bug bounty workflows, plus Android app hacking and PEH notes.</p>
+        <a href="https://github.com/CyberBishop/ars0n-framework-dockerized" target="_blank" rel="noopener">View repo ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="bench" class="section">
+    <h2><i>05</i> The workbench</h2>
+    <p class="sub">Where electrical engineering meets security. Hardware I design, wire and flash myself.</p>
+    <div class="bench">
+      <article class="card wide">
+        <span class="tag amber">Embedded · ESP32</span>
+        <h3>HomeKit car remote</h3>
+        <p>An ESP32 DevKit that presses the buttons of a donor key fob through 4N35 optocouplers and exposes each button to Apple Home as a momentary switch (lock, unlock, trunk, aux and remote start). Built on HomeSpan with PlatformIO. The optocouplers keep the fob electrically isolated from the microcontroller.</p>
+        <pre class="wiring" aria-label="Wiring diagram"><code>ESP32 GPIO ──330Ω──▶ 4N35 pin1 ─┐
+                     pin2 ──────▶ GND
+                     pin4 (C) ──▶ fob button pad
+                     pin5 (E) ──▶ fob common ring
+ GPIO 16 lock · 17 unlock · 18 trunk · 19 aux · 21 start</code></pre>
+      </article>
+      <article class="card">
+        <span class="tag amber">Swift · macOS</span>
+        <h3>Home theater orchestrator</h3>
+        <p>A native macOS app that scripts my whole living-room setup into one action.</p>
+      </article>
+      <article class="card">
+        <span class="tag amber">Arduino · Robotics</span>
+        <h3>2WD robot &amp; microcontrollers</h3>
+        <p>Two-wheel-drive robot builds and Arduino prototypes, from my EEE degree days until now.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><i>06</i> Toolkit &amp; certs</h2>
+    <div class="kit">
+      <div>
+        <h4>Security</h4>
+        <p class="chips"><span>Burp Suite</span><span>Nmap</span><span>ffuf</span><span>Nuclei</span><span>sqlmap</span><span>Frida</span><span>Splunk</span><span>MITRE ATT&amp;CK</span><span>WAF</span><span>GRC</span></p>
+        <h4>Cloud &amp; ops</h4>
+        <p class="chips"><span>Azure</span><span>AWS</span><span>GCP</span><span>Docker</span><span>Linux</span><span>Elasticsearch</span><span>Grafana</span><span>Nginx</span></p>
+        <h4>Code &amp; hardware</h4>
+        <p class="chips"><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Bash</span><span>Swift</span><span>C++ / Arduino</span><span>PlatformIO</span><span>ESP32</span></p>
+      </div>
+      <ul class="certs">
+        <li><b>AWS Certified Cloud Practitioner</b><span>Amazon Web Services · 2025</span></li>
+        <li><b>Junior Penetration Tester (PT1)</b><span>TryHackMe · 2025</span></li>
+        <li><b>eJPT</b><span>INE Security</span></li>
+        <li><b>Certified AppSec Practitioner (CAP)</b><span>The SecOps Group</span></li>
+        <li><b>MEng, Software Systems Engineering</b><span>University of Regina · 2028</span></li>
+        <li><b>BEng, Electrical &amp; Electronics</b><span>Covenant University · 2024 · WES evaluated</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Let's talk security.</h2>
+    <p>Open to cyber security analyst, AppSec and GRC roles in Canada. I'm also happy to talk CTFs or hardware.</p>
+    <div class="btns center">
+      <a class="btn primary" href="mailto:alabialvin@gmail.com">alabialvin@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/alviiin/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/CyberBishop" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://twitter.com/_cyberbishop_" target="_blank" rel="noopener">X ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Timi Alabi</span>
+  <span>Hand-built, no frameworks · <kbd>↑↑↓↓←→←→BA</kbd> does something</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
