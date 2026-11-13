@@ -98,6 +98,15 @@
   addEventListener('resize', () => { size(); if (reduce) draw(); });
   size(); draw();
 
+  // Mobile menu
+  const btn = document.querySelector('.menu'), nav = document.getElementById('nav');
+  if (btn && nav) {
+    const set = o => { nav.classList.toggle('open', o); btn.setAttribute('aria-expanded', o); };
+    btn.addEventListener('click', () => set(!nav.classList.contains('open')));
+    nav.addEventListener('click', e => { if (e.target.closest('a')) set(false); });
+    addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+  }
+
   // Konami code easter egg
   const code = 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a';
   let seq = [];
