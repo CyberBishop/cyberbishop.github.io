@@ -38,7 +38,7 @@ h1{font:700 clamp(38px,6.4vw,76px)/1.04 var(--sans);letter-spacing:-.035em;margi
 .btn.primary:hover{box-shadow:0 8px 28px rgba(0,255,157,.35)}
 .portrait{justify-self:center;text-align:center}
 .frame{position:relative;padding:14px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(160deg,var(--panel2),var(--panel));box-shadow:0 0 0 1px rgba(0,255,157,.08),0 30px 80px rgba(0,0,0,.6),0 0 80px rgba(0,255,157,.08)}
-.frame img{display:block;width:min(320px,70vw);height:auto;aspect-ratio:1;border-radius:14px;object-fit:cover;filter:saturate(1.05) contrast(1.03)}
+.frame img{display:block;width:min(320px,70vw);height:auto;aspect-ratio:3/4;border-radius:14px;object-fit:cover;object-position:50% 25%;filter:saturate(1.05) contrast(1.03)}
 .frame::after{content:"";position:absolute;inset:14px;border-radius:14px;background:repeating-linear-gradient(0deg,rgba(0,0,0,.14) 0 1px,transparent 1px 3px);pointer-events:none}
 .corner{position:absolute;width:18px;height:18px;border:2px solid var(--accent)}
 .tl{top:-1px;left:-1px;border-right:0;border-bottom:0;border-top-left-radius:22px}
