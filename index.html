@@ -26,6 +26,7 @@
     <a href="#experience">experience</a>
     <a href="#ctf">ctf</a>
     <a href="#work">work</a>
+    <a href="writeups/">writeups</a>
     <a href="#bench">workbench</a>
     <a href="#contact" class="cta">contact</a>
   </nav>
@@ -124,10 +125,10 @@
 
   <section id="ctf" class="section">
     <h2><i>03</i> Capture the Flag</h2>
-    <p class="sub">Competing with the University of Regina Cybersecurity Club (UofRCTF).</p>
+    <p class="sub">Competing with the University of Regina Cybersecurity Club as <strong>pile0bones</strong> (formerly UofRCTF).</p>
     <div class="ctf-grid">
       <article class="card photo">
-        <img src="assets/nationals.jpg" alt="Team UofRCTF at the Mastercard CTF National Finals in Montreal" loading="lazy">
+        <img src="assets/nationals.jpg" alt="Team pile0bones at the Mastercard CTF National Finals in Montreal" loading="lazy">
         <div>
           <span class="tag gold">4th / 27</span>
           <h3>Mastercard CTF National Finals</h3>
@@ -149,9 +150,9 @@
       </article>
       <article class="card slim">
         <span class="tag">Writeups</span>
-        <h3>Public writeups</h3>
-        <p>Walkthroughs from CTFs I've played, from Cyber Apocalypse onward.</p>
-        <a href="https://github.com/CyberBishop/writeups" target="_blank" rel="noopener">github.com/CyberBishop/writeups ↗</a>
+        <h3>Writeups &amp; blog</h3>
+        <p>Home lab builds, SIEM notes and security explainers, written up as I learn them.</p>
+        <a href="writeups/">Read the writeups →</a>
       </article>
     </div>
     <figure class="group">
@@ -212,23 +213,10 @@
  GPIO 16 lock · 17 unlock · 18 trunk · 19 aux · 21 start</code></pre>
       </article>
       <article class="card wide theater">
-        <span class="tag amber">Swift · Core Audio · AirPlay 2</span>
-        <h3>Home theater orchestrator: surround from HomePod minis</h3>
-        <p>Apple never gave the original HomePod mini a surround role, so I built one. A native macOS menu-bar app captures all system audio with a Core Audio process tap (no virtual drivers), plays the full stereo mix on the Mac as the <em>front</em>, and streams a derived <em>rear</em> channel to a HomePod mini over AirPlay 2.</p>
-        <div class="flow" role="img" aria-label="Signal flow: iPhone to Mac, split into front and rear legs, rear goes to HomePod mini">
-          <div class="node">iPhone<small>AirPlay → Mac</small></div>
-          <div class="arrow">→</div>
-          <div class="node hot">Mac<small>Core Audio tap</small></div>
-          <div class="fork">
-            <div class="leg"><span>FRONT</span> full stereo, delayed to match AirPlay latency → Mac speakers</div>
-            <div class="leg"><span>REAR</span> (L−R) ambience, phase-inverted → HomePod mini</div>
-          </div>
-        </div>
-        <ul class="points">
-          <li><b>Rear matrix:</b> the rear leg carries the classic surround-matrix difference signal. It's near-silent for centre-panned dialogue and present for reverb and wide effects, so it's a real "behind you" cue, not a duplicate.</li>
-          <li><b>Sync:</b> the HomePod leg runs through a PTP-timed AirPlay 2 sender. Both legs anchor to the same wall-clock instant, and the Mac leg is delayed by the measured AirPlay lead, which was about 600 ms, so the two sides of the room stay aligned.</li>
-          <li><b>Resilience:</b> backpressure drops buffers instead of queueing, SIGPIPE is handled, and a dropped HomePod session reconnects and re-syncs automatically. Volume and pause live in the menu bar so touching the HomePod can't hijack playback.</li>
-        </ul>
+        <span class="tag amber">Swift · macOS · In progress</span>
+        <h3>Home theater orchestrator</h3>
+        <p>Apple doesn't let the original HomePod mini work as a rear speaker for a home theater, so I'm trying to make it happen myself. I wrote a small Mac app that grabs whatever audio is playing, keeps the normal sound on the Mac, and sends only the wide, echoey part of the mix to a HomePod behind me.</p>
+        <p>The tricky bit is timing. AirPlay adds about half a second of delay, so the Mac has to wait for the HomePod or everything sounds like an echo. Still a work in progress: I'm still tuning the sync and keeping the connection stable.</p>
       </article>
     </div>
   </section>

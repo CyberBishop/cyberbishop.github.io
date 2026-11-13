@@ -148,3 +148,28 @@ body.konami{filter:hue-rotate(160deg)}
 .points li{color:#aeb9c6;font-size:15px;padding-left:18px;position:relative}
 .points li::before{content:">";position:absolute;left:0;color:var(--accent);font-family:var(--mono)}
 .points b{color:var(--text)}
+.wu{max-width:860px}
+.wu #cards{grid-template-columns:1fr}
+.pcard{display:grid;grid-template-columns:220px 1fr;gap:22px;padding:0;text-decoration:none;color:inherit;margin:0}
+.pcard img{width:100%;height:100%;min-height:150px;object-fit:cover;display:block}
+.pcard>div{padding:22px 22px 22px 0}
+.pcard h3{font-size:22px}
+.tags{font:400 12px var(--mono)!important;color:var(--mute)!important;margin-top:8px}
+.post{padding:48px 0 80px}
+.post h1{font-size:clamp(30px,5vw,48px);margin:8px 0 10px}
+.post .meta{font:400 13px var(--mono);color:var(--accent)}
+.back{font:500 13px var(--mono);color:var(--accent);text-decoration:none;display:inline-block;margin:6px 0 18px}
+.prose{color:#c4cdd8;font-size:17px;margin:28px 0 36px}
+.prose h2,.prose h3{font-family:var(--sans);color:var(--text);margin:36px 0 12px;letter-spacing:-.02em}
+.prose h2{font-size:28px}.prose h3{font-size:22px}
+.prose p,.prose ul,.prose ol,.prose blockquote,.prose pre{margin:0 0 16px}
+.prose ul,.prose ol{padding-left:24px}
+.prose li{margin-bottom:6px}
+.prose a{color:var(--accent)}
+.prose img{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);margin:12px 0;display:block}
+.prose blockquote{border-left:3px solid var(--accent);padding:6px 16px;background:var(--panel);border-radius:0 10px 10px 0;color:#aeb9c6}
+.prose code{font:400 .88em var(--mono);background:var(--panel);border:1px solid var(--line);padding:2px 6px;border-radius:6px;color:var(--amber)}
+.prose pre{background:#05070a;border:1px solid var(--line);border-radius:12px;padding:16px;overflow-x:auto}
+.prose pre code{background:none;border:0;padding:0;color:#d5dde6}
+.prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+@media (max-width:600px){.pcard{grid-template-columns:1fr}.pcard>div{padding:0 20px 20px}}

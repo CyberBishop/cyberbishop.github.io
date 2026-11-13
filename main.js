@@ -10,7 +10,8 @@
     'echo "4th of 27, national finals"'
   ];
   const el = document.getElementById('typed');
-  if (reduce) {
+  if (!el) {
+  } else if (reduce) {
     el.textContent = lines[0];
   } else {
     let l = 0, c = 0, del = false;
