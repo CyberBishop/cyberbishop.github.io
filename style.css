@@ -131,3 +131,6 @@ body.konami{filter:hue-rotate(160deg)}
   .reveal{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
+.group{margin-top:18px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+.group img{display:block;width:100%;max-height:520px;object-fit:cover;object-position:50% 40%}
+.group figcaption{margin:0;padding:12px 18px;color:var(--mute);text-transform:none;letter-spacing:0;font-size:12.5px}
