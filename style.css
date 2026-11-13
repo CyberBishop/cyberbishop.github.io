@@ -185,3 +185,5 @@ body.konami{filter:hue-rotate(160deg)}
   .nav nav a{font-size:15px;padding:12px 14px}
   .nav nav .cta{text-align:center;margin-top:6px}
 }
+.pcard.nocover{grid-template-columns:1fr}
+.pcard.nocover>div{padding:22px}

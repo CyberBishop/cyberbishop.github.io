@@ -6,7 +6,7 @@
 
   function renderList() {
     cards.innerHTML = posts.map(p => `
-      <a class="card pcard in reveal" href="#/${p.slug}">
+      <a class="card pcard${p.cover ? '' : ' nocover'} in reveal" href="#/${p.slug}">
         ${p.cover ? `<img src="../${p.cover}" alt="" loading="lazy">` : ''}
         <div>
           <span class="tag">${fmt(p.date)} · ${p.minutes} min read</span>
